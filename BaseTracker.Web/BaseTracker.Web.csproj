@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="scripts\jquery.cookie.js" />
     <Content Include="scripts\jquery.timer.js" />
     <Content Include="scripts\timer.js" />
     <Content Include="Web.config" />

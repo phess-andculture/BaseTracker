@@ -1,14 +1,23 @@
 ﻿// Common functions
 function pad(number, length) {
-    var str = '' + number;
-    while (str.length < length) { str = '0' + str; }
-    return str;
+	var str = '' + number;
+	while (str.length < length) { str = '0' + str; }
+	return str;
 }
 function formatTime(time) {
-    var min = parseInt(time / 6000),
-        sec = parseInt(time / 100) - (min * 60),
-        hundredths = pad(time - (sec * 100) - (min * 6000), 2);
-    return (min > 0 ? pad(min, 2) : "00") + ":" + pad(sec, 2) + ":" + hundredths;
+	var hours = parseInt(time / 3600000),
+		min = parseInt(time / 6000) - (hours * 60),
+		sec = parseInt(time / 100) - (min * 60),
+		hundredths = pad(time - (sec * 100) - (min * 6000), 2);
+	return (hours > 0 ? pad(hours, 2) : "00") + ":" + (min > 0 ? pad(min, 2) : "00") + ":" + pad(sec, 2);
+}
+function StartCookie(id) {
+	$.cookie("TimerStart", new Date());
+	$.cookie("ActiveItemID", id);
+}
+function EndCookie() {
+	$.cookie("TimerStart", null);
+	$.cookie("ActiveItemID", null);
 }
 
 /**
@@ -28,21 +37,3 @@ function formatTime(time) {
  * the current time is stored in hundredths of a second so the
  * increment time must be divided by ten.
  */
-var jTimer = new (function () {
-    var $stopwatch, // Stopwatch element on the page
-        incrementTime = 1000, // Timer speed in milliseconds
-        currentTime = 0, // Current time in hundredths of a second
-        updateTimer = function () {
-            $stopwatch.html(formatTime(currentTime));
-            currentTime += incrementTime / 10;
-        },
-        init = function () {
-            $stopwatch = $('#stopwatch');
-            jTimer.Timer = $.timer(updateTimer, incrementTime, false);
-        };
-    this.resetStopwatch = function () {
-        currentTime = 0;
-        this.Timer.stop().once();
-    };
-    $(init);
-});

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="id" nillable="true">
+    <xs:complexType>
+      <xs:simpleContent msdata:ColumnName="id_Text" msdata:Ordinal="1">
+        <xs:extension base="xs:string">
+          <xs:attribute name="type" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="position" nillable="true">
+    <xs:complexType>
+      <xs:simpleContent msdata:ColumnName="position_Text" msdata:Ordinal="1">
+        <xs:extension base="xs:string">
+          <xs:attribute name="type" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="completed" nillable="true">
+    <xs:complexType>
+      <xs:simpleContent msdata:ColumnName="completed_Text" msdata:Ordinal="1">
+        <xs:extension base="xs:string">
+          <xs:attribute name="type" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="todo-list">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="description" type="xs:string" minOccurs="0" />
+        <xs:element name="name" type="xs:string" minOccurs="0" />
+        <xs:element name="completed-count" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="completed-count_Text" msdata:Ordinal="1">
+              <xs:extension base="xs:string">
+                <xs:attribute name="type" type="xs:string" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="id" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="milestone-id" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="nil" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="position" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="private" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="private_Text" msdata:Ordinal="1">
+              <xs:extension base="xs:string">
+                <xs:attribute name="type" type="xs:string" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="project-id" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="project-id_Text" msdata:Ordinal="1">
+              <xs:extension base="xs:string">
+                <xs:attribute name="type" type="xs:string" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tracked" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="tracked_Text" msdata:Ordinal="1">
+              <xs:extension base="xs:string">
+                <xs:attribute name="type" type="xs:string" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="uncompleted-count" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="uncompleted-count_Text" msdata:Ordinal="1">
+              <xs:extension base="xs:string">
+                <xs:attribute name="type" type="xs:string" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="todo-items" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="todo-item" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="content" type="xs:string" minOccurs="0" />
+                    <xs:element name="creator-name" type="xs:string" minOccurs="0" />
+                    <xs:element name="commented-at" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="nil" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="comments-count" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="comments-count_Text" msdata:Ordinal="1">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="type" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="completed" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="created-at" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="created-at_Text" msdata:Ordinal="1">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="type" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="creator-id" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="creator-id_Text" msdata:Ordinal="1">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="type" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="due-at" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="nil" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="id" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="position" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="todo-list-id" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="todo-list-id_Text" msdata:Ordinal="1">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="type" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="updated-at" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="nil" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="created-on" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="created-on_Text" msdata:Ordinal="2">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="type" type="xs:string" />
+                            <xs:attribute name="deprecated" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="completed" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="complete" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="complete_Text" msdata:Ordinal="1">
+              <xs:extension base="xs:string">
+                <xs:attribute name="deprecated" type="xs:string" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="id" />
+        <xs:element ref="position" />
+        <xs:element ref="completed" />
+        <xs:element ref="todo-list" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

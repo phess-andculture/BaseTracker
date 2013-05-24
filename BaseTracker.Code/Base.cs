@@ -20,7 +20,7 @@ namespace BaseTracker.Code {
             if (requestXML != null) {
                 request.ContentLength = requestXML.InnerXml.Length;
                 request.ServicePoint.Expect100Continue = false;
-                using (StreamWriter stream = new StreamWriter(request.GetRequestStream())) {
+                using (var stream = new StreamWriter(request.GetRequestStream())) {
                     stream.Write(requestXML.InnerXml);
                     stream.Close();
                 }
@@ -30,8 +30,8 @@ namespace BaseTracker.Code {
         public static T DeserializeFromResponse<T>(string input) {
             dynamic xmlDocument = new XmlDocument();
             xmlDocument.LoadXml(input);
-            XmlSerializer deserializer = new XmlSerializer(typeof(T));
-            XmlNodeReader nodeReader = new XmlNodeReader(xmlDocument.DocumentElement);
+            var deserializer = new XmlSerializer(typeof(T));
+            var nodeReader = new XmlNodeReader(xmlDocument.DocumentElement);
             T retVal = default(T);
             try {
                 retVal = (T)deserializer.Deserialize(nodeReader);
@@ -42,12 +42,12 @@ namespace BaseTracker.Code {
         }
         public static XmlDocument SerializeToDocument<T>(T input) {
             dynamic xmlDocument = new XmlDocument();
-            XmlSerializer serializer = new XmlSerializer(typeof(T));
-            using (MemoryStream ms = new MemoryStream()) {
-                using (StreamWriter writer = new StreamWriter(ms, Encoding.UTF8)) {
+            var serializer = new XmlSerializer(typeof(T));
+            using (var ms = new MemoryStream()) {
+                using (var writer = new StreamWriter(ms, Encoding.UTF8)) {
                     serializer.Serialize(writer, input);
                     ms.Seek(0, SeekOrigin.Begin);
-                    using (StreamReader reader = new StreamReader(ms, Encoding.UTF8)) {
+                    using (var reader = new StreamReader(ms, Encoding.UTF8)) {
                         xmlDocument.LoadXml(reader.ReadToEnd());
                     }
                 }

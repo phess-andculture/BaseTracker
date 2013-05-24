@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<todo-item>
+  <commented-at nil="true"></commented-at>
+  <comments-count type="integer">0</comments-count>
+  <completed type="boolean">false</completed>
+  <content>Diagrams/Documents</content>
+  <created-at type="datetime">2012-05-15T13:49:22Z</created-at>
+  <creator-id type="integer">6502087</creator-id>
+  <due-at nil="true"></due-at>
+  <id type="integer">135632380</id>
+  <position type="integer">2</position>
+  <todo-list-id type="integer">20002842</todo-list-id>
+  <updated-at nil="true"></updated-at>
+  <created-on type="datetime" deprecated="true">2012-05-15T13:49:22Z</created-on>
+  <creator-name>Alex Yost</creator-name>
+</todo-item>

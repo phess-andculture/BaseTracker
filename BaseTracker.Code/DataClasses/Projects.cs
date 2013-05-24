@@ -11,13 +11,25 @@ namespace BaseTracker.Code.DataClasses {
         public string Status { get; set; }
         public int CompanyID { get; set; }
         public string Company { get; set; }
-
+		public List<TodoLists> TodoLists { get; set; }
+		public TodoLists[] TodoListArray {
+			get { return TodoLists.ToArray(); }
+		}
         public Projects(projectsProject input) {
-            this.ID = int.Parse(input.id.First().Value);
+	        this.ID = int.Parse(input.id.First().Value);
             this.Name = input.name;
             this.Status = input.status;
             this.CompanyID = int.Parse(input.company.First().id.First().Value);
             this.Company = input.company.First().name;
+			this.TodoLists = new List<TodoLists>();
         }
+		public Projects(project input) {
+			this.ID = int.Parse(input.id.First().Value);
+			this.Name = input.name;
+			this.Status = input.status;
+			this.CompanyID = int.Parse(input.company.First().id.First().Value);
+			this.Company = input.company.First().name;
+			this.TodoLists = new List<TodoLists>();
+		}
     }
 }

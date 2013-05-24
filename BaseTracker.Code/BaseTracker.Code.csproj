@@ -42,7 +42,14 @@
     <Compile Include="Base.cs" />
     <Compile Include="BasecampAPI.cs" />
     <Compile Include="DataClasses\Projects.cs" />
+    <Compile Include="DataClasses\TodoItem.cs" />
+    <Compile Include="DataClasses\TodoList.cs" />
+    <Compile Include="DataClasses\TodoLists.cs" />
+    <Compile Include="DataObjects\project.cs" />
     <Compile Include="DataObjects\projects.cs" />
+    <Compile Include="DataObjects\todo_item.cs" />
+    <Compile Include="DataObjects\todo_list.cs" />
+    <Compile Include="DataObjects\todo_lists.cs" />
     <Compile Include="IBasecampAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
