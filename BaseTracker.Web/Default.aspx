@@ -10,14 +10,23 @@
     <script src="/scripts/timer.js" type="text/javascript"></script>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <span id="stopwatch">00:00:00</span>
-			<p>
-                <input type='button' value='Play/Pause' onclick='jTimer.Timer.toggle();' />
-			    <input type='button' value='Stop/Reset' onclick='jTimer.resetStopwatch();' />
-            </p>
+    <div runat="server" id="projects" visible="false">
+        <asp:Repeater ID="rptProjects" runat="server">
+            <ItemTemplate>
+                <a href="/Default.aspx?q=P+<%# Eval("ID") %>"><%# Eval("Name") %></a><br />
+            </ItemTemplate>
+        </asp:Repeater>
     </div>
-    </form>
+    <div runat="server" id="to_do_timer" visible="false">
+        <form id="form1" runat="server">
+            <div>
+                <span id="stopwatch">00:00:00</span>
+                <p>
+                    <input type='button' value='Play/Pause' onclick='jTimer.Timer.toggle();' />
+                    <input type='button' value='Stop/Reset' onclick='jTimer.resetStopwatch();' />
+                </p>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

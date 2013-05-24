@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projects type="array">
+  <project>
+    <created-on type="date">2010-01-08</created-on>
+    <id type="integer">4194322</id>
+    <last-changed-on type="datetime">2012-04-16T14:02:31Z</last-changed-on>
+    <name>Support</name>
+    <status>active</status>
+    <company>
+      <id type="integer">1667807</id>
+      <name>Strine Printing</name>
+    </company>
+  </project>
+  <project>
+    <created-on type="date">2010-03-17</created-on>
+    <id type="integer">4558743</id>
+    <last-changed-on type="datetime">2013-05-20T15:15:23Z</last-changed-on>
+    <name>EPM Maintenance (2010-Current) </name>
+    <status>active</status>
+    <company>
+      <id type="integer">836778</id>
+      <name>Giant Foods</name>
+    </company>
+  </project>
+  <project>
+    <created-on type="date">2010-08-02</created-on>
+    <id type="integer">5285403</id>
+    <last-changed-on type="datetime">2013-03-11T14:13:12Z</last-changed-on>
+    <name>Support</name>
+    <status>active</status>
+    <company>
+      <id type="integer">1439362</id>
+      <name>OCFC - Office for Children &amp; Families in the Courts</name>
+    </company>
+  </project>
+  <project>
+    <created-on type="date">2010-10-21</created-on>
+    <id type="integer">5773108</id>
+    <last-changed-on type="datetime">2012-10-03T15:27:02Z</last-changed-on>
+    <name>PA Downtown Support</name>
+    <status>active</status>
+    <company>
+      <id type="integer">1332324</id>
+      <name>PA Downtown</name>
+    </company>
+  </project>
+  <project>
+    <created-on type="date">2012-05-07</created-on>
+    <id type="integer">9622901</id>
+    <last-changed-on type="datetime">2012-10-15T19:52:55Z</last-changed-on>
+    <name>AOPC Execution, phase 2</name>
+    <status>active</status>
+    <company>
+      <id type="integer">2900723</id>
+      <name>AOPC</name>
+    </company>
+  </project>
+  <project>
+    <created-on type="date">2012-07-27</created-on>
+    <id type="integer">10009584</id>
+    <last-changed-on type="datetime">2013-05-14T21:00:37Z</last-changed-on>
+    <name>Technical Maintenance July 2012 Forward (Non-Contracted)</name>
+    <status>active</status>
+    <company>
+      <id type="integer">877284</id>
+      <name>Mount Nittany Medical Center</name>
+    </company>
+  </project>
+  <project>
+    <created-on type="date">2013-01-03</created-on>
+    <id type="integer">10624540</id>
+    <last-changed-on type="datetime">2013-05-23T21:01:51Z</last-changed-on>
+    <name>Block of Time 10 (80 hours)</name>
+    <status>active</status>
+    <company>
+      <id type="integer">951862</id>
+      <name>Milton Hershey School</name>
+    </company>
+  </project>
+  <project>
+    <created-on type="date">2013-05-22</created-on>
+    <id type="integer">11136604</id>
+    <last-changed-on type="datetime">2013-05-22T13:53:10Z</last-changed-on>
+    <name>AOPC Monthly Enhancements &amp; Support</name>
+    <status>active</status>
+    <company>
+      <id type="integer">2900723</id>
+      <name>AOPC</name>
+    </company>
+  </project>
+</projects>

@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="Base.cs" />
     <Compile Include="BasecampAPI.cs" />
+    <Compile Include="DataClasses\Projects.cs" />
+    <Compile Include="DataObjects\projects.cs" />
     <Compile Include="IBasecampAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
